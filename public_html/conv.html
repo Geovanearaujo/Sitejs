@@ -1,0 +1,321 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="conv.js" ></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <script>
+      const api_url = 'https://api.exchangeratesapi.io/latest';
+
+        async function getEXCHANGE(){
+          const response = await fetch(api_url);
+          const data = await response.json();
+	      
+          var BR = data.rates.BRL;
+          var US = data.rates.USD;
+          var JP = data.rates.JPY;
+          var CH = data.rates.CNY;
+          var SK = data.rates.KRW;
+          var CA = data.rates.CAD;
+          var IS = data.rates.ISK;
+          var PH = data.rates.PHP;
+
+          document.getElementById("br").innerHTML = BR;
+          document.getElementById("us").innerHTML = US;
+          document.getElementById("jp").innerHTML = JP;
+          document.getElementById("cn").innerHTML = CH;
+          document.getElementById("sk").innerHTML = SK;
+          document.getElementById("ca").innerHTML = CA;
+          document.getElementById("is").innerHTML = IS;
+          document.getElementById("ph").innerHTML = PH;
+        }
+
+        async function getEXCHANGE2(){
+          const response = await fetch(api_url);
+          const data = await response.json();
+	      
+          var CZ = data.rates.CZK;
+          var AU = data.rates.AUD;
+          var RO = data.rates.RON;
+          var SE = data.rates.SEK;
+          var ID = data.rates.IDR;
+          var IN = data.rates.INR;
+          var RU = data.rates.RUB;
+          var HR = data.rates.HRK;
+
+          document.getElementById("cz").innerHTML = CZ;          
+          document.getElementById("au").innerHTML = AU;
+          document.getElementById("ro").innerHTML = RO;
+          document.getElementById("se").innerHTML = SE;
+          document.getElementById("id").innerHTML = ID;
+          document.getElementById("in").innerHTML = IN;
+          document.getElementById("ru").innerHTML = RU;
+          document.getElementById("hr").innerHTML = HR;
+        }
+
+        async function getEXCHANGE3(){
+          const response = await fetch(api_url);
+          const data = await response.json();
+
+          var TH = data.rates.THB;
+          var CF = data.rates.CHF;
+          var SG = data.rates.SGD;
+          var IL = data.rates.ILS;
+          var GB = data.rates.GBP;
+          var MY = data.rates.MYR;
+          var MX = data.rates.MXN;
+          var HU = data.rates.HUF;
+          
+          document.getElementById("th").innerHTML = TH;
+          document.getElementById("ch").innerHTML = CF;
+          document.getElementById("sg").innerHTML = SG;
+          document.getElementById("il").innerHTML = IL;
+          document.getElementById("gb").innerHTML = GB;
+          document.getElementById("my").innerHTML = MY;
+          document.getElementById("mx").innerHTML = MX;
+          document.getElementById("fh").innerHTML = HU;
+        }
+
+        async function getEXCHANGE4(){
+          const response = await fetch(api_url);
+          const data = await response.json();
+	      
+          var PL = data.rates.PLN;
+          var BG = data.rates.BGN;
+          var TR = data.rates.TRY;
+          var NO = data.rates.NOK;
+          var NZ = data.rates.NZD;
+          var ZA = data.rates.ZAR;
+          var HK = data.rates.HKD;
+          var DK = data.rates.DKK;
+
+          document.getElementById("pl").innerHTML = PL;
+          document.getElementById("bg").innerHTML = BG;
+          document.getElementById("tr").innerHTML = TR;
+          document.getElementById("no").innerHTML = NO;
+          document.getElementById("nz").innerHTML = NZ;
+          document.getElementById("za").innerHTML = ZA;
+          document.getElementById("hd").innerHTML = HK;
+          document.getElementById("dk").innerHTML = DK;
+        }
+
+    </script>
+
+</head>
+
+<body onload="getEXCHANGE(), getEXCHANGE2(), getEXCHANGE3(), getEXCHANGE4()">
+
+<h2>Cotação de Moedas (base Euro)</h2>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">  
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#section1">America</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section2">Europa</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section3">Ásia e Oceania</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section4">África e Oriente Médio</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#section5">Conversor</a>
+    </li>
+  </ul>
+</nav>
+
+<div id="section1" class="container-fluid" style="padding-top:70px;padding-bottom:70px;background-color:red">
+  <h1>America</h1>
+  <table class="table table-dark table-hover table-striped" >
+    <thead>
+    <tr>
+        <th style="text-align: left; padding: 8px;">Moeda</th>
+        <th style="text-align: left; padding: 8px;">Valor (&euro; 1,00)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Real brasileiro (&#82;&#36;)</td>
+        <td style="text-align: left; padding: 8px;" id="br"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Dólar Americano (US&#36;)</td>
+        <td style="text-align: left; padding: 8px;" id="us"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Dólar canadense (C&#36;)</td>
+        <td style="text-align: left; padding: 8px;" id="ca"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Peso mexicano (Mex&#36;)</td>
+        <td style="text-align: left; padding: 8px;" id="mx"></td>
+    </tr>
+    </tbody>
+    </table></br></br>
+</div>
+<div id="section2" class="container-fluid" style="padding-top:70px;padding-bottom:70px;background-color:blue">
+  <h1>Europa</h1>
+  <table class="table table-dark table-hover table-striped" >
+    <thead>
+    <tr>
+        <th style="text-align: left; padding: 8px;">Moeda</th>
+        <th style="text-align: left; padding: 8px;">Valor (&euro; 1,00)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Franco suíço (Fr)</td>
+        <td style="text-align: left; padding: 8px;" id="ch"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Coroa islandesa (kr)</td>
+        <td style="text-align: left; padding: 8px;" id="is"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Coroa dinamarquesa (kr)</td>
+        <td style="text-align: left; padding: 8px;" id="dk"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Florim húngaro (Ft)</td>
+        <td style="text-align: left; padding: 8px;" id="fh"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Coroa tcheca (Kč)</td>
+        <td style="text-align: left; padding: 8px;" id="cz"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Leu romeno (Ron)</td>
+        <td style="text-align: left; padding: 8px;" id="ro"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Coroa sueca (Kr)</td>
+        <td style="text-align: left; padding: 8px;" id="se"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Rublo russo (₽)</td>
+        <td style="text-align: left; padding: 8px;" id="ru"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Złoty polonês (zł)</td>
+        <td style="text-align: left; padding: 8px;" id="pl"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Lev búlgaro (лв)</td>
+        <td style="text-align: left; padding: 8px;" id="bg"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Coroa norueguesa (Kr)</td>
+        <td style="text-align: left; padding: 8px;" id="no"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Libra esterlina (£)</td>
+        <td style="text-align: left; padding: 8px;" id="gb"></td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div id="section3" class="container-fluid" style="padding-top:70px;padding-bottom:70px;background-color:yellow">
+  <h1>Ásia e Oceania</h1>
+  <table class="table table-dark table-hover table-striped" >
+    <thead>
+    <tr>
+        <th style="text-align: left; padding: 8px;">Moeda</th>
+        <th style="text-align: left; padding: 8px;">Valor (&euro; 1,00)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Iene japonês (¥)</td>
+        <td style="text-align: left; padding: 8px;" id="jp"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Yuan/Renminbi chinês (¥)</td>
+        <td style="text-align: left; padding: 8px;" id="cn"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Won sul-coreano (₩)</td>
+        <td style="text-align: left; padding: 8px;" id="sk"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Dólar de Hong Kong (HK$)</td>
+        <td style="text-align: left; padding: 8px;" id="hd"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Peso filipino (₱)</td>
+        <td style="text-align: left; padding: 8px;" id="ph"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Dólar australiano (A$)</td>
+        <td style="text-align: left; padding: 8px;" id="au"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Rupia indonésia (Rp)</td>
+        <td style="text-align: left; padding: 8px;" id="id"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Rupia indiana (Rp)</td>
+        <td style="text-align: left; padding: 8px;" id="in"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Bate tailandês (฿)</td>
+        <td style="text-align: left; padding: 8px;" id="th"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Dólar de Singapura ($)</td>
+        <td style="text-align: left; padding: 8px;" id="sg"></td>
+    </tr>
+        <tr>
+        <td style="text-align: left; padding: 8px;">Dólar neozelandês (NZ$)</td>
+        <td style="text-align: left; padding: 8px;" id="nz"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Ringgit malaio (RM)</td>
+        <td style="text-align: left; padding: 8px;" id="my"></td>
+    </tr>
+    </tbody>
+    </table>
+</div>
+<div id="section4" class="container-fluid" style="padding-top:70px;padding-bottom:70px;background-color:black">
+  <h1>África e Oriente Médio</h1>
+  <table class="table table-dark table-hover table-striped" >
+    <thead>
+    <tr>
+        <th style="text-align: left; padding: 8px;">Moeda</th>
+        <th style="text-align: left; padding: 8px;">Valor (&euro; 1,00)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Novo shekel israelense (₪)</td>
+        <td style="text-align: left; padding: 8px;" id="il"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Rand sul-africano (R)</td>
+        <td style="text-align: left; padding: 8px;" id="za"></td>
+    </tr>
+    <tr>
+        <td style="text-align: left; padding: 8px;">Lira turca (₤)</td>
+        <td style="text-align: left; padding: 8px;" id="tr"></td>
+    </tr>
+    </tbody>
+   </table>
+   <br><br>
+</div>
+
+<div id="section5" class="container-fluid" style="padding-top:70px;padding-bottom:70px;background-color:green">
+    <h1>Conversor</h1>
+    <iframe height="430px" width="92%" style="margin-left:30px" position="aling:center" src="con1.html" name="iframe_a"></iframe>
+</div>
+
+</body>
+</html>
