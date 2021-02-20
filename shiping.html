@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="js/jquery-3.5.1.min"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://love-calculator.p.rapidapi.com/getPercentage?fname=John&sname=Alice",
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-host": "love-calculator.p.rapidapi.com",
+                "x-rapidapi-key": "0014febfb4msh265daec26ce2351p117280jsn932c5c8359af"
+            }
+        }
+
+        $.ajax(settings).done(function(response) {
+            console.log(response);
+        });
+    </script>
+
+</body>
+
+</html>

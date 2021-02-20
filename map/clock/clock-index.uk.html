@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Clock UI Dark</title>
+    <link href="./clock-style.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script language=javascript type="text/javascript">
+    dayName = new Array ("dom", "seg", "ter", "qua", "qui", "sex", "sab")
+    monName = new Array ("jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez")
+    now = new Date();
+    nw = now.getTimezoneOffset();
+    now.setMinutes(now.getMinutes() + nw + 60);
+    ampm = now.getHours() >= 12 ? 'P.M.' : 'A.M.';
+    </script>
+    <style>
+        .navbar {
+        width: 40%;
+        background-color: #091921;
+        overflow: auto;
+        }
+
+        .navbar a {
+        float: left;
+        padding: 12px;
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        }
+
+        .navbar a:hover {
+        background-color: #000;
+        }
+
+        .active {
+        background-color: white;
+        opacity: 80%;
+        }
+
+        @media screen and (max-width: 500px) {
+        .navbar a {
+            float: none;
+            display: block;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a class="active" href="javascript:history.back()" style="font-size:small; color:gray; font-family: 'Orbitron', sans-serif; border: 2px solid gray;"><i class="fa fa-fw fa-arrow-left"></i>Voltar</a>
+    </div>
+
+    <div class="clock">
+    <div class="date" style="font-size:x-small; color:gray; font-family: 'Orbitron', sans-serif;">
+        <script type="text/javascript">
+            document.write (ampm + " : ")
+            document.write (dayName[now.getDay() ] + ", " + now.getDate () + " de " + monName [now.getMonth() ] + " de " + now.getFullYear ())
+        </script>
+    </div>
+        <div class="hour">
+            <div class="hr" id="hr"></div>
+        </div>
+        <div class="min">
+            <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        const deg = 6;
+        const hr = document.querySelector('#hr');
+        const mn = document.querySelector('#mn');
+        const sc = document.querySelector('#sc');
+
+        setInterval(() => {
+
+            let day = new Date();
+            let n = day.getTimezoneOffset();
+            day.setMinutes(day.getMinutes() + n + 60);
+            let hh = day.getHours()*30;
+            let mm = day.getMinutes()*deg;
+            let ss = day.getSeconds()*deg;
+
+            hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+            mn.style.transform = `rotateZ(${(mm)}deg)`;
+            sc.style.transform = `rotateZ(${(ss)}deg)`;
+
+        })
+        
+    </script>
+    
+</body>
+</html>

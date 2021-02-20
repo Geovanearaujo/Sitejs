@@ -1,0 +1,248 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <link href="css/bootstrap.min.css.map" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min" ></script>
+    <script type="text/javascript" src="js/bootstrap.min.js.map" ></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"/>
+
+<style>
+    .navbar{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      border-right: 1px solid #bbb;
+      font-size:small;
+      color:gray;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+</style>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="video.mp4">DongHuaLand</a>
+            </div>
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="conversor.html">Conversor</a></li>
+            <li><a href="trivia.html">Trivias</a></li>
+            <li><a href="eps.html">MiniGames</a></li>
+            <li><a href="recursos.html">Apoia-se</a></li>
+            </ul>
+        </div>
+    </nav>
+
+<style>
+
+body{
+  background-image: url('bg.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50% 50%; 
+  position: relative;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #f40083;
+  color: white;
+}
+
+.fa-github {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-telegram {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-discord {
+  padding: 10px;
+  font-size: 15px;
+  width: 35px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  background: #5858FA;
+  color: white;
+}
+
+.fa-twitch {
+  background: #29088A;
+  color: white;
+}
+
+.fa-fandom {
+  background: #FFFFFF;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- <div class="container" style='position:absolute; position:fixed; top:48%; left:45%;'>
+    <button type="button" style="background-color:black; opacity:0.3" class="btn btn-success" data-toggle="collapse" data-target="#demo">
+      <span class="glyphicon glyphicon-collapse-down"></span> Abrir
+    </button>
+  <div id="demo" class="collapse" style='position:absolute; top:25px; left:-80px;'>
+    <br><h3 style="font-size:1.75vw"><mark><b><i>Video de Apresentação!</i></b></mark></h3>
+    <video width="280" height="180" controls style="max-width:100%;height:auto;">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+    </video>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+  $("#demo").on("hide.bs.collapse", function(){
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-down"></span> Abrir');
+  });
+  $("#demo").on("show.bs.collapse", function(){
+    $(".btn").html('<span class="glyphicon glyphicon-collapse-up"></span> Fechar');
+  });
+});
+</script> -->
+
+<!--<div id="videostory" class="mfp-hide" style="max-width: 75%; margin: 0; auto; position:absolute;">
+    <iframe width="853" height="480" href="video.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <script>
+      $("#videostory").magnificPopup({
+        type:'inline',
+        midClick: true
+      })
+    </script>
+-->
+
+<script> 
+      $(document).ready(function() {
+      $('.navbar-brand').magnificPopup({
+        disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: false,
+
+        fixedContentPos: false
+      });
+      });
+</script>
+
+<style>
+      .mfp-fade.mfp-bg {
+      opacity: 0;
+      -webkit-transition: all 0.15s ease-out; 
+      -moz-transition: all 0.15s ease-out; 
+      transition: all 0.15s ease-out;
+    }
+    .mfp-fade.mfp-bg.mfp-ready {
+      opacity: 0.8;
+    }
+    .mfp-fade.mfp-bg.mfp-removing {
+      opacity: 0;
+    }
+
+    .mfp-fade.mfp-wrap .mfp-content {
+      opacity: 0;
+      -webkit-transition: all 0.15s ease-out; 
+      -moz-transition: all 0.15s ease-out; 
+      transition: all 0.15s ease-out;
+    }
+    .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+      opacity: 1;
+    }
+    .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+      opacity: 0;
+    }
+</style>
+
+<div class="footer">
+  <p>
+    <a href="https://www.youtube.com/channel/UCpQPCvpIIVkg4eWxBLNe1RQ" class="fa fa-youtube"></a>
+    <a href="https://instagram.com/donghualandbr?igshid=3qyhjne20525" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-github"></a>
+    <a href="https://donghua-brasil.fandom.com/pt-br/f" class="fa fa-fandom">
+    <img id="demo" onmouseover="mouseOver()" onmouseout="mouseOut()" src="fandom.gif" width="14" height="14">
+    </a>
+    <a href="https://t.me/joinchat/NpAHXFgckNW74xKI5sGbqg" class="fa fa-telegram"></a>
+    <a href="#" class="fab fa-discord"></a>
+    <a href="#" class="fa fa-twitch"></a>
+  </p>
+  <p>Siga-nos nas Redes Sociais. Entre em Contato. Ou mesmo Confira e Contribua com a infraestrutura do site.</p>
+</div>
+
+<script>
+
+  function mouseOver() {
+    document.getElementById("demo").style.opacity = 0.2;
+  }
+
+  function mouseOut() {
+    document.getElementById("demo").style.opacity = 1;
+  }
+
+</script>
+
+</body>
+
+</html>

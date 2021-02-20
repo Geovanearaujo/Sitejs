@@ -1,0 +1,182 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+
+    <link href="css/bootstrap.min.css.map" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-3.5.1.min" ></script>
+    <script type="text/javascript" src="js/bootstrap.min.js.map" ></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+
+<style>
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+    body{
+    background-image: url('bg2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%; 
+    position: relative;
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .navbar{
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    li {
+      border-right: 1px solid #bbb;
+      font-size:small;
+      color:gray;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
+
+    span {
+      color: SlateBlue;
+      background-color: orange;
+    }
+
+    .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    padding: 20px;
+    grid-gap: 40px;
+}
+
+.card {
+    background-color: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+
+.container {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+img {
+    width: 30%;
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.container:after {
+    content: "";
+    height: 100%;
+    width: 31.1%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+}
+
+.card1>.container:after {
+    background-image: linear-gradient( 135deg, #0100ec, #fb36f4);
+}
+
+.card2>.container:after {
+    background-image: linear-gradient( 135deg, #2bdce3, #42ffdb);
+}
+
+.card3>.container:after {
+    background-image: linear-gradient( 135deg, #ffab1d, #f8501c);
+}
+
+.details {
+    padding: 20px 10px;
+}
+
+.details>h3 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+
+.details>p {
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+</style>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand">DongHuaLand</a>
+            </div>
+            <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="conversor.html">Conversor</a></li>
+            <li><a href="trivia.html">Trivias</a></li>
+            <li><a href="eps.html">MiniGames</a></li>
+            <li><a href="recursos.html">Apoia-se</a></li>
+            </ul>
+        </div>
+    </nav>
+
+</head>
+
+<body>
+
+</br>/<br><h2>Esperimente um de nossos MiniGames</i></h2>
+
+    <div class="cards">
+        <div class="card card1">
+            <div class="container">
+                <img src="./Grid Cards/LA.jpeg" alt="Caça Niqueis">
+            </div>
+            <div class="details">
+                <h3><a href="./jogos/slotmachine/index.html">Caça Niqueis</a></h3>
+                <p>Que tal testar sua sorte, no mundo Pokémon?</p>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="container">
+                <img src="./Grid Cards/NY.jpeg" alt="Jogo da Memória">
+            </div>
+            <div class="details">
+                <h3><a href="./jogos/memoria/index.html">Jogo da Memória</a></h3>
+                <p>Teste sua memória com alguns de seus Pokémon's favoritos.</p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="container">
+                <img src="./Grid Cards/SG.jpeg" alt="Corrida">
+            </div>
+            <div class="details">
+                <h3><a href="./jogos/car-game.html">Corrida de Carro</a></h3>
+                <p>Dirija em alta velocidade, com a vista bela da praia, relembrando os anos 80.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
